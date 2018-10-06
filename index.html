@@ -56,18 +56,59 @@
     <div class="col-md-6">
    <p> A Biblioteca Nacional foi criada em 1999, e tem como principal missão reunir, conservar e difundir o património documental cabo-verdiano. Para tal, tem vindo a funcionar como Agência Bibliográfica Nacional, o que lhe confere o estatuto de depositária legal de toda a documentação bibliográfica produzida no país.O seu acervo tem tido uma evolução tanto quantitativa como qualitativa, estando hoje à disposição do público, desde a literatura de ficção à literatura técnico-científica, passando, naturalmente, por importantes obras de referência como enciclopédias, dicionários, diretórios, atlas, guias e documentos afins. Uma vasta e diversificada documentação, cobrindo todas as áreas do conhecimento humano. Preservar, atualizar e divulgar esse património bibliográfico, de modo a que todos os interessados possam aceder-lhe são as principais preocupações da Biblioteca Nacional, cujas atuais funções são o resultado de uma evolução e da consequente adaptação às características de comunicação e informação da sociedade cabo-verdiana.</p>
     </div>
-    <div class="col-md-6">
-    <video id="videobncv">
-  <source src="videos/bncv.mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
+    <div class="col-md-6 rounded-videos">
+   <iframe id="videocuradora" class="videos"
+src="https://www.youtube.com/embed/tgbNymZ7vqY" allowfullscreen frameborder="0">
+</iframe>
     </div>
-    </div>
+    </div>   
     </div>
     </div>
     <div id="historia" class="overlay ">
     <div class="container overlay-container parallax">
     <h1 class="salmao">História BNCV</h1>
+    <div class="row">
+    <div class="col-md-6 rounded-videos">
+<iframe id="videohistoria" class="videos"
+src="https://www.youtube.com/embed/tgbNymZ7vqY" allowfullscreen frameborder="0">
+</iframe>
+</div>
+    <div class="col-md-6">
+  <div class="timeline">
+  <div class="timeline-container left">
+    <div class="timeline-content">
+      <h6 class="castanho">1999</h6>
+      <p class="timeline-paragraph">Fundação da BNCV</p>
+    </div>
+  </div>
+  <div class="timeline-container right">
+    <div class="timeline-content">
+      <h6 class="castanho">2003</h6>
+      <p class="timeline-paragraph">Criação sala multimédia</p>
+    </div>
+  </div>
+  <div class="timeline-container left">
+    <div class="timeline-content">
+     <h6 class="castanho">2004</h6>
+      <p class="timeline-paragraph">Criação sala de leitura infantil</p>
+    </div>
+  </div>
+  <div class="timeline-container right">
+    <div class="timeline-content">
+     <h6 class="castanho">2004</h6>
+      <p class="timeline-paragraph">Criação sala de leitura infantil</p>
+    </div>
+  </div>
+  <div class="timeline-container left">
+    <div class="timeline-content">
+     <h6 class="castanho">2004</h6>
+      <p class="timeline-paragraph">Criação sala de leitura infantil</p>
+    </div>
+  </div>
+</div>
+</div>
+
+  </div>  
     </div>
     </div>
     <div id="espacos" class="overlay">
@@ -132,14 +173,30 @@ for (var i = 0; i < btns.length; i++) {
     this.className += " active";
   });
 }
+
+var stopVideo = function ( element ) {
+	var iframe = element.querySelector( 'iframe');
+	var video = element.querySelector( 'video' );
+	if ( iframe !== null ) {
+		var iframeSrc = iframe.src;
+		iframe.src = iframeSrc;
+	}
+	if ( video !== null ) {
+		video.pause();
+	}
+};
+	//var videoContainer =  document.getElementById('videocuradora');
+//	console.log(videoContainer);
+//	var iframe = videoContainer.querySelector( 'iframe');
+//	var video = videoContainer.querySelector( 'video' );
+//	
 function goToNav(destination) {
 	"use strict";
 	var menuBtn = document.getElementById("menu-btn");
 	var iconBar = document.getElementById("iconbar");
 	var element = document.getElementById(destination);
 	var myVideo = document.getElementById("videobncv");
-	myVideo.pause();
-	myVideo.currentTime = 0;
+
 	iconBar.className = "icon-bar align-center ";
     
     switch(destination) {
@@ -152,8 +209,7 @@ function goToNav(destination) {
 			menuBtn.className = "castanho";
 			iconBar.className += "icon-bar-salmao";
 			openNav('bncv',0);
-			myVideo.currentTime = 0;
-			myVideo.play();
+			
 			break;
 		}
 		case 'servicos':{
@@ -182,6 +238,7 @@ function goToNav(destination) {
 
 
 function openNav(nav, container) {
+	//stopVideo(document.getElementById('curadora'));
 	
 	if(container==currentContainer){
 		return;
@@ -189,15 +246,6 @@ function openNav(nav, container) {
 	var navElement = document.getElementById(nav);
 	var containers = navElement.getElementsByClassName('overlay');
 	var dots = navElement.getElementsByClassName('dot');
-	
-	if(nav=='bncv'){
-		var myVideo = document.getElementById("videobncv");
-		myVideo.pause();
-		myVideo.currentTime = 0;
-	}
-	if(nav=='bncv' && container==0){
-		myVideo.play();
-	}
 	
 	for (var i = 0; i < containers.length; i++) {
   		containers[i].style.height = "0%";
