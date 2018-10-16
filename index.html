@@ -185,7 +185,7 @@
 <div class="home-container container align-center">
  <span id="home-btn" class="icon castanho-mais-claro" onClick="goToNav('home')">&#9776; </span>
  <span>
-    <a class="icon castanho-mais-claro socials" href="https://bncv.cv" title="Catálogo" target="_blank"><i class="fa fa-book"></i></a>
+    <a class="btn icon castanho-mais-claro socials" href="https://catalogo.cm-vfxira.pt/" title="Catálogo" target="_blank"><i class="fa fa-book"></i></a>
     </span>
 </div>
 <div class="socials-container container">
@@ -194,8 +194,20 @@
     <span><a class="icon castanho-mais-claro socials" href="https://www.youtube.com/channel/UCRYay80Ctsc4z1IoOdr0Fhw" title="Youtube" target="_blank"><i class="fa fa-youtube-play"></i></a></span>
 </div>
 </div>
+
+<!-- SEARCH -->
+<div id="search-div" class="container">
+<div class="input-group mb-3">
+  <input id="searchInput" type="text" class="form-control">
+  <div class="input-group-append">
+    <button class="btn search-btn" type="submit"><i class="fa fa-search"></i></button> 
+  </div>
+</div>
+</div>
+<!-- MAIN WRAPPER -->
 <div id="container">
   <div id="container2">
+  <!-- HOME -->
     <section id="home" class="box parallax">
     <div id="home-main-container" class="container">
     <img src="images/bncv-logo.png">
@@ -203,6 +215,8 @@
     <button type="button" class="btn icon-bar-castanho castanho-mais-claro" onClick="goToNav('bncv')" >Ler mais</button>
     </div>
     </section>
+    
+    <!-- BNCV -->
     <section id="bncv" class="box parallax">
     <div id="curadora" class="overlay">
     <div class="container overlay-container parallax">
@@ -213,7 +227,7 @@
     </div>
     <div class="col-md-6 rounded-videos">
    <iframe id="videocuradora" class="videos"
-src="https://www.youtube.com/embed/tgbNymZ7vqY" allowfullscreen frameborder="0">
+src="https://www.youtube.com/embed/DxFFHHzKIPw" allowfullscreen frameborder="0">
 </iframe>
     </div>
     </div>   
@@ -225,7 +239,7 @@ src="https://www.youtube.com/embed/tgbNymZ7vqY" allowfullscreen frameborder="0">
     <div class="row">
     <div class="col-md-6 rounded-videos">
 <iframe id="videohistoria" class="videos"
-src="https://www.youtube.com/embed/tgbNymZ7vqY" allowfullscreen frameborder="0">
+src="https://www.youtube.com/embed/tJ5Y5j0Sw8k" allowfullscreen frameborder="0">
 </iframe>
 </div>
     <div class="col-md-6">
@@ -327,30 +341,136 @@ src="https://www.youtube.com/embed/tgbNymZ7vqY" allowfullscreen frameborder="0">
     <span class="dot icon-bar-salmao" onClick="openNav('bncv',1)"></span> 
     <span class="dot icon-bar-salmao" onClick="openNav('bncv',2)"></span> 
     </div>
-    <!-- ESPAÇOS MODAL -->
-   
+ 
+  
   </section>
-    <div id="servicos" class="box parallax">
+ 	
+    <!-- SERVIÇOS -->
+    <section id="servicos" class="box parallax">
+    <div id="servico1" class="overlay">
     <div class="container overlay-container">
-    <h1>Serviços</h1>
-    <p>Olá</p>
-     <h1 class="salmao">Biblioteca Nacional<br> de Cabo Verde</h1>
+     <h1 class="castanho">Serviço 1</h1>
+    </div>
+    </div>
+    <div id="servico2" class="overlay">
+    <div class="container overlay-container">
+     <h1 class="castanho">Serviço 2</h1>
+    </div>
+    </div>
+     <div id="servico3" class="overlay">
+    <div class="container overlay-container">
+     <h1 class="castanho">Serviço 3</h1>
+    </div>
     </div>
         <!-- VERTICAL NAVIGATION -->
 		<div class="dot-container">
-  <span class="dot dot-active icon-bar-castanho"></span> 
-  <span class="dot icon-bar-castanho"></span> 
-  <span class="dot icon-bar-castanho"></span>
+  <span class="dot dot-active icon-bar-castanho" onClick="openNav('servicos',0)"></span> 
+  <span class="dot icon-bar-castanho" onClick="openNav('servicos',1)"></span> 
+  <span class="dot icon-bar-castanho" onClick="openNav('servicos',2)"></span>
 </div>
+    </section>
+    
+    <!-- EVENTOS -->
+    <section id="eventos" class="box parallax">
+    <div id="eventoPrincipal" class="overlay">
+    <div class="container overlay-container">
+     <h1 class="salmao">Próximos eventos</h1>
+ <div class="row">
+  <div class="col-md-4">
+    <div class="card">
+  <img class="card-img-top" src="images/livraria/livraria.jpg" alt="evento">
+  <div class="card-body">
+    <h5 class="card-title">Doação de Livros FACV</h5>
+    <p class="card-text">Data: 10/10/2018</p>
+      <p class="card-text">Hora: 15h00</p>
+      <p class="card-text">Local: Sede Forças Armadas</p>
+  </div>
+</div>
+  </div>
+  <div class="col-md-8">
+  <div class="card-deck">
+  <div class="card">
+    <img class="card-img-top"  src="images/outrosespacos/outrosespacos.jpg" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Feira do Livro</h5>
+      <p class="card-text">Data: 1/11/2018</p>
+      <p class="card-text">Hora: 9h30</p>
+      <p class="card-text">Local: Átrio BNCV</p>
+  
     </div>
-    <div id="eventos" class="box parallax">
+  </div>
+  <div class="card">
+    <img class="card-img-top"  src="images/outrosespacos/outros-espacos1.jpg" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Exposição</h5>
+     <p class="card-text">Data: 10/11/2018</p>
+      <p class="card-text">Hora: 9h30</p>
+      <p class="card-text">Local: Átrio BNCV</p>
+    </div>
+  </div>
+  <div class="card">
+    <img class="card-img-top"  src="images/salaconferencia/salaconferencias.jpg" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Lançamento do livro</h5>
+      <p class="card-text">Data: 20/11/2018</p>
+      <p class="card-text">Hora: 10h00</p>
+      <p class="card-text">Local: Sala conferências BNCV</p>
+    </div>
+  </div>
+</div>
+  </div>
+  </div>
+
+    </div>
+    </div>
+    <div id="outrosEventos" class="overlay">
+    <div class="container overlay-container">
+     <h1 class="salmao">Outros eventos</h1>
+     <div class="row">
+  <div class="col-md-4">
+    <div class="card">
+  <img class="card-img-top" src="images/livraria/livraria.jpg" alt="evento">
+  <div class="card-body">
+    <h5 class="card-title">Evento 1</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+  </div>
+  <div class="col-md-4">
+    <div class="card">
+  <img class="card-img-top" src="images/salaconferencia/salaconferencias.jpg" alt="Evento 2">
+  <div class="card-body">
+    <h5 class="card-title">Evento 2</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+  </div>
+  <div class="col-md-4">
+    <div class="card">
+  <img class="card-img-top" src="images/salainfantil/salainfantil.jpg" alt="Evento 3">
+  <div class="card-body">
+    <h5 class="card-title">Evento3</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+  </div>
+</div>
+<br>
+    </div>
+    </div>
+   
         <!-- VERTICAL NAVIGATION -->
 		<div class="dot-container">
-  <span class="dot dot-active icon-bar-castanho-mais-claro" onclick="currentSlide('eventos',1)"></span> 
-  <span class="dot icon-bar-castanho-mais-claro" onclick="currentSlide('eventos',2)"></span>
+  <span class="dot dot-active icon-bar-salmao" title="Próximo" onclick="openNav('eventos',0)"></span> 
+  <span class="dot icon-bar-salmao" title="Outros eventos" onclick="openNav('eventos',1)"></span>
 </div>
-    </div>
-     <div id="blog" class="box parallax">
+    </section>
+    
+    <!-- BLOG -->
+     <section id="blog" class="box parallax">
         <!-- VERTICAL NAVIGATION -->
 		<div class="dot-container">
   <span class="dot dot-active icon-bar-amarelo" title="Administração" onclick="currentSlide('blog',1)"></span> 
@@ -358,15 +478,47 @@ src="https://www.youtube.com/embed/tgbNymZ7vqY" allowfullscreen frameborder="0">
   <span class="dot icon-bar-amarelo" title="Produção" onclick="currentSlide('blog',3)"></span>
   <span class="dot icon-bar-amarelo" title="Serviços Gerais" onclick="currentSlide('blog',4)"></span> 
 </div>
+    </section>
+    
+    <!-- CONTACTOS -->
+     <section id="contactos" class="box parallax">
+    <div id="contactsContainer" class="container">
+     <h1 class="salmao">Contactos</h1>
+ <div class="row">
+  <div class="col-md-4">
+  <h3 class="salmao text-center">Formulário de Contacto</h3>
+  <form>
+	<div class="form-group row">
+    	<input type="text" class="form-control" id="nome" placeholder="Nome">
     </div>
-     <div id="contactos" class="box parallax">
-    	<div>CONTACTOS</div>
+    <div class="form-group row">
+    	<input type="email" class="form-control" id="inputEmail3" placeholder="Email">
     </div>
+    <div class="form-group row">
+    	<input type="text" class="form-control" id="assunto" placeholder="Assunto">
+    </div>
+    <div class="form-group row">
+    	<textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Mensagem" rows="3"></textarea>
+    </div>
+    <div class="form-group row"><button type="submit" class="btn icon-bar-salmao">Enviar</button></div>
+    
+</form>
+  </div>
+  <div class="col-md-8">
+  <h3 class="salmao text-center">Localização</h3>
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3855.3545490740053!2d-23.513499485467943!3d14.917327589601339!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x93598e363f1b5b1%3A0x5a63f0293b8abdd!2sBiblioteca+Nacional!5e0!3m2!1spt-PT!2scv!4v1538998546508" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+  </div>
+  </div>
+
+    </div>
+ </section>
   </div>
 </div>
 <footer><p class="footer-paragraph">Biblioteca Nacional, Praia | Várzea , CP 0000 Telf.: (+238) 261 84 13</p></footer>
 <script>
+var currentNav = "";
 var currentContainer = -1;
+
 var btnContainer = document.getElementById("myNavBar");
 
 // Get all buttons with class="btn" inside the container
@@ -427,12 +579,14 @@ function goToNav(destination) {
 		case 'servicos':{
 			//menuBtn.className = "castanho-mais-claro";
 			iconBar.className+="icon-bar-castanho";
+			openNav('servicos', 0)
 			colorIcons('castanho-mais-claro');
 			break;
 		}
 		case 'eventos':{
 			//menuBtn.className = "branco";
 			iconBar.className += "icon-bar-salmao";
+			openNav('eventos',0);
 			colorIcons('castanho');
 			break;
 		}
@@ -463,7 +617,11 @@ function colorIcons(color){
 }
 function openNav(nav, container) {
 	//stopVideo(document.getElementById('curadora'));
-	
+	console.log(nav);
+	console.log(container);
+	if(nav!=currentNav){
+			currentContainer=-1;
+	}
 	if(container==currentContainer){
 		return;
 	}
@@ -481,6 +639,7 @@ for (i = 0; i < dots.length; i++) {
       dots[i].className = dots[i].className.replace(" dot-active", "");
   }
   dots[container].className += " dot-active";
+  currentNav = nav;
   currentContainer = container;
 }
 

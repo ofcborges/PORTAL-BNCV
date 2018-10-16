@@ -698,6 +698,14 @@ img {vertical-align: middle;}
 	white-space:normal;
 }
 
+#servicos-main-container,#eventos-main-container{
+	width:100%;
+	height:100%;
+	padding-top:80px;
+	padding-left:30px;
+	white-space:normal;
+}
+
 .front-paragraph{
 	margin-top:5%;
 	padding-right:60%;
@@ -711,6 +719,61 @@ footer{
 }
 
 .footer-paragraph{
-	font-size:14px;
+	font-size:14px; 
 	color:grey;
 }
+
+#search-div{
+	position: fixed;
+	top:2%;
+	right:0;
+	z-index:999;
+	width:25%;
+}
+
+#searchInput{
+	background-color:transparent;
+	border-right-width:0px;
+}
+
+#searchInput:focus{
+	box-shadow:none;
+	border-bottom-color:rgb(206, 212, 218);
+	border-top-color:rgb(206, 212, 218);
+	border-left-color:rgb(206, 212, 218);
+	border-right-color:transparent;
+	
+}
+
+.search-btn{
+	border-bottom-color: rgb(206, 212, 218);
+	border-top-color: rgb(206, 212, 218);
+	border-right-color: rgb(206, 212, 218);
+}
+
+#mainEvent{
+	height:80%;
+	overflow:hidden;
+}
+
+.text-container{
+	background-color:grey;
+	opacity:0.5;
+}
+
+.card{
+	
+	background-color:transparent;
+}
+
+.form-control{
+	background-color:transparent;
+}
+
+#contactsContainer{
+	width:100%;
+	height:100%;
+	padding-top:80px;
+	padding-left:50px;
+}
+
